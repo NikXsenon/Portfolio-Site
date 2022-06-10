@@ -1,0 +1,317 @@
+@import "fonts";
+@import 'global';
+@import 'reset';
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+    }
+}
+
+.logo {
+    margin: 0 auto;
+    font-size: 50px;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-family: Poppins;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+
+.menu {
+    padding-right: 15px;
+
+    &__list-link--left {
+        color: #FFFFFF;
+        font-family: Poppins;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: 800;
+        font-style: normal;
+        border: none;
+        background: linear-gradient(180deg, #070A1B 30%, #008d94 100%);
+        padding: 10px 15px 10px 15px;
+        border-radius: 1000px;
+        transition: all 0.3s ease-in-out 0s;
+
+
+
+
+    }
+
+    &__list-link--left:hover {
+        color: #00FFCB;
+        background: linear-gradient(90deg, #008d94 10%, #070A1B 100%);
+        box-shadow: 0px 0px 30px rgba(79, 209, 197, .64);
+
+    }
+
+    &__list-link--right {
+        color: #070A1B;
+        font-family: Poppins;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: 800;
+        font-style: normal;
+        border: 2px #008d94;
+        background: linear-gradient(180deg, #008d94 30%, #070A1B 100%);
+        padding: 10px 15px 10px 15px;
+        border-radius: 30px;
+        transition: all .3s;
+    }
+
+    &__list-link--right:hover {
+        color: #00FFCB;
+        background: linear-gradient(240deg, #070A1B 30%, #008d94 100%);
+        box-shadow: 0px 0px 30px #070A1B;
+    }
+
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        padding-right: 45px;
+        padding-left: 35px;
+    }
+}
+
+.footer {
+
+    &__info-title {
+        font-family: Poppins600;
+        font-weight: 600;
+        line-height: 40px;
+        font-size: 28px;
+        color: #FFFFFF;
+
+    }
+
+    &__info-email {
+        font-family: Poppins;
+        color: #FFFFFF;
+    }
+
+    &__inner {
+        padding: 60px 0 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    &__info-email {
+        font-family: RobotoCondensed;
+        color: #FFFFFF;
+    }
+
+    &__menu-link {
+        font-family: PTSans;
+        color: #FFFFFF;
+
+        &:hover {
+            text-decoration: underline;
+            color: #00FFCB;
+        }
+    }
+
+    &__menu-item {
+        padding-bottom: 10px;
+    }
+
+    &__social-item {
+        padding-bottom: 15px;
+    }
+
+    &__social-link--instagram::before {
+        background-image: url(../img/instagram-icon.svg);
+    }
+
+    &__social-link--facebook::before {
+        background-image: url(../img/facebook-icon.svg);
+    }
+
+    &__social-link--twitter::before {
+        background-image: url(../img/twitter-icon.svg);
+    }
+
+    &__social-link--linkedin::before {
+        background-image: url(../img/linkedin-icon.svg);
+    }
+
+    &__social-link--github::before {
+        background-image: url(../img/github-icon.svg);
+    }
+
+    &__social-link {
+        font-family: PTSans;
+        color: #FFFFFF;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            background-repeat: no-repeat;
+            content: '';
+            left: -35px;
+            width: 30px;
+            height: 30px;
+            top: -2px;
+            align-items: center;
+
+        }
+
+        &:hover {
+            text-decoration: underline;
+            color: #00FFCB;
+        }
+    }
+}
+
+.main {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    &__img {
+        height: 600px;
+        box-shadow: 0px 0px 50px rgba(79, 209, 197, .64);
+        border-radius: 60px 0;
+    }
+
+    &__text {
+        font-family: Poppins;
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+
+    &__skils {
+        margin-top: 30px;
+        font-size: 21px;
+        font-family: Poppins;
+        font-style: italic;
+    }
+
+    margin-bottom: 150px;
+
+    .span {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.works {
+    margin-bottom: 150px;
+    &__title {
+        font-size: 40px;
+        line-height: 120%;
+        font-family: Poppins600;
+        color: #00FFCB;
+        text-shadow:  0px 0px 10px #00FFCB;
+        margin-bottom: 40px;
+        text-decoration: underline  ;
+    }
+
+    &__img {
+        width: 700px;
+        height: 600px;
+        border-radius: 100px 30px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-3d {
+        padding: 20px;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .carousel-3d>* {
+        flex: 0 0 auto;
+    }
+
+    .carousel-3d figure {
+        margin: 0;
+        width: 100%;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        transition: transform 0.5s, -webkit-transform 0.5s;
+    }
+
+    .carousel-3d figure img,
+    .carousel-3d figure div {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .carousel-3d figure div:not(:first-of-type),
+    .carousel-3d figure img:not(:first-of-type) {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .carousel-3d nav {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 0;
+    }
+
+    .carousel-3d nav button {
+        flex: 0 0 auto;
+        margin: 0 20px;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 25px;
+        background: transparent;
+        border: 2px solid #00FFCB;
+        border-radius: 30px;
+        padding: 10px 50px 10px 50px;
+        font-weight: bold;
+        transition: all .3s ease;
+    }
+
+    .carousel-3d nav button:hover {
+        color: #00FFCB;
+        background: linear-gradient(90deg, #008d94 10%, #070A1B 100%);
+        box-shadow: 0px 0px 20px rgba(79, 209, 197, .64);
+    }
+}
+
+.about{
+    &__title{
+        font-size: 40px;
+        line-height: 120%;
+        font-family: Poppins600;
+        color: #070A1B;
+        text-shadow:  0px 0px 10px #070A1B;
+        margin-bottom: 40px;
+       
+        text-decoration: underline  ;
+        display: flex;
+        justify-content: flex-end; 
+    }
+
+    &__text{
+        font-family: Poppins;
+        color: #FFFFFF;
+        font-size: 25px;
+        line-height: 120%;
+    }
+
+    margin-bottom: 150px;
+}
+
